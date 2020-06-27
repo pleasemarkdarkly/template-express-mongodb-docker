@@ -1,5 +1,7 @@
 # template express/mongodb docker app
 
+Single Node Express MongoDB Docker project
+
 # build
 
 ```
