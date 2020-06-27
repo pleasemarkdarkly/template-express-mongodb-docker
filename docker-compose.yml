@@ -1,0 +1,23 @@
+version: '2.4'
+
+services:
+  app:
+    # context: packages/template_app
+    # image: ${APPLICATION}_app
+    container_name: ${APPLICATION}_app
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3030:80"
+      - "9229:9229"
+    volumes:
+      - .:/app
+  
+  mongo:
+      image: mongo
+      container_name: ${APPLICATION}_db
+      volumes:
+        - ${PWD}/${APPLICATION}_mongodb:/data/db
+      ports:
+        - '27017:27017'
