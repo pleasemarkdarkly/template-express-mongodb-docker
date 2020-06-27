@@ -5,7 +5,7 @@ Single Node Express MongoDB Docker project
 # build
 
 ```
-pico .env
+nano .env
 docker-compose build
 docker-compose up -d
 docker logs template_app -f
